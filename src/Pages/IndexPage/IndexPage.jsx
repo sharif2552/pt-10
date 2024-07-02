@@ -31,9 +31,16 @@ const IndexPage = () => {
         </div>
         <button
           onClick={toggleDarkMode}
-          className="p-2 rounded-full bg-blue-600 text-white dark:bg-gray-600"
+          className={`p-2 rounded-full bg-blue-600 text-white dark:bg-gray-600 flex items-center justify-center hover:bg-blue-700 dark:hover:bg-gray-700 transition-colors duration-300`}
+          style={{
+            width: "40px",
+            height: "40px",
+          }}
         >
-          <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
+          <FontAwesomeIcon
+            icon={darkMode ? faSun : faMoon}
+            className="text-lg"
+          />
         </button>
       </nav>
 
@@ -94,26 +101,33 @@ const IndexPage = () => {
 
       {/* MyUSD Introduction Section */}
       <div className="flex w-100vw flex-row justify-center">
-        <section className="flex flex-col w-full lg:flex-row items-center lg:items-start py-20 lg:px-5 bg-white dark:bg-custom-secondary-dark text-center lg:text-left lg:space-x-10 space-y-10 lg:space-y-0 px-4 lg:flex">
+        <section className="flex flex-col w-full lg:flex-row lg:justify-center items-center lg:items-start py-20 lg:px-32 bg-white dark:bg-custom-secondary-dark text-center lg:text-left lg:space-x-10 space-y-10 lg:space-y-0 px-4 lg:flex">
           <div className="lg:w-1/2 flex flex-col justify-center">
-            <h2 className="text-4xl font-bold mb-4">Introducing MyUSD</h2>
+            <h2 className="text-4xl font-bold mb-4">MyUSD</h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              Brief introduction about MyUSD goes here. Explain what it is and
-              its benefits.
+              MyUSD is a stablecoin designed to provide a stable, scalable, and
+              fully redeemable option within the Cardano ecosystem. It is pegged
+              to the US dollar, ensuring that its value remains consistent and
+              non-volatile. MyUSD serves as a foundational element in Mynth’s
+              broader mission to create a seamless and integrated DeFi
+              experience, ensuring users can easily transfer, exchange, and
+              manage their digital assets across various blockchain platforms.
             </p>
           </div>
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-4xl">
-              <div className="aspect-w-16 aspect-h-9 flex justify-center">
-                <iframe
-                  className="rounded-lg shadow-lg"
-                  src="https://www.youtube.com/embed/Pe0ObwhTWhs"
-                  title="What is MyUSD? How is it so stable? Mynth Stablecoin, MyUSD explained"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
+          <div className="lg:w-96 lg:h-full flex flex-col justify-center">
+            <div className="relative w-full h-52 lg:max-w-screen-md">
+              <div className="flex justify-center w-full h-full">
+                <div className="w-full aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/Pe0ObwhTWhs"
+                    title="What is MyUSD? How is it so stable? Mynth Stablecoin, MyUSD explained"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -125,9 +139,9 @@ const IndexPage = () => {
         <h2 className="text-4xl font-bold mb-8">In the Spotlight</h2>
         <div className="flex flex-wrap justify-center space-x-4">
           {/* Add your social proof elements here */}
-          <div className="w-full md:w-1/3 p-4 transition-transform transform hover:scale-105">
+          <div className="w-full md:w-1/4 p-4 transition-transform transform hover:scale-105">
             <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
+              <div className=" h-60 aspect-w-16 aspect-h-9">
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/wvUukA48do8"
@@ -143,9 +157,9 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/3 p-4 transition-transform transform hover:scale-105">
+          <div className="w-full md:w-1/4 p-4 transition-transform transform hover:scale-105">
             <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
+              <div className=" h-60 aspect-w-16 aspect-h-9">
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/DhP0ZLOO6no"
@@ -161,9 +175,9 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/3 p-4 transition-transform transform hover:scale-105">
+          <div className="w-full md:w-1/4 p-4 transition-transform transform hover:scale-105">
             <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
+              <div className=" h-60 aspect-w-16 aspect-h-9">
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/O0ELHI4VE-w"
@@ -189,43 +203,46 @@ const IndexPage = () => {
             : "bg-white dark:bg-custom-secondary-dark text-gray-900"
         }`}
       >
-        <h2 className="text-4xl font-bold mb-8">A Quick Intro</h2>
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto">
-          <div className="md:w-1/2 p-4">
-            <img
-              src={darkMode ? technologyDark : technologyLight}
-              alt="Infographic"
-              className="w-full rounded"
-            />
-          </div>
-          <div className="md:w-1/2 p-4">
-            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              Mynth creates highways to interconnect networks, allowing users to
-              seamlessly transfer native assets without barriers. Mynth offers a
-              suite of tools to help you navigate the complex world of
-              blockchains with ease, including:
-            </p>
-            <ul className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              <li>MyUSD, a reliable and scalable stablecoin</li>
-              <li>
-                Stable Swaps, allowing for full interoperability between stable
-                assets
-              </li>
-              <li>
-                Cross-Chain Swaps, enabling assets to be used interchangeably
-              </li>
-              <li>
-                Mynth Lizard, a layer 2 network offering zero-knowledge proofs
-              </li>
-            </ul>
-            <p className="text-xl text-gray-700 dark:text-gray-300">
-              Dissatisfied with the existing options for blockchain
-              interoperability and scalability, the Mynth team bonded together
-              to build on top of the most secure and decentralized network. We
-              are determined to further enhance blockchain usability and fulfill
-              the mission to equalize the playing field without discrimination,
-              bringing new financial opportunities to everyone.
-            </p>
+        <div className="max-w-6xl mx-auto text-left">
+          <h2 className="text-4xl font-bold mb-8 text-center">A Quick Intro</h2>
+          <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="md:w-1/2 p-4">
+              <img
+                src={darkMode ? technologyDark : technologyLight}
+                alt="Infographic"
+                className="w-full rounded "
+              />
+            </div>
+            <div className="md:w-1/2 p-4">
+              <p className="text-lg text-gray-800 dark:text-gray-300 mb-6 leading-relaxed">
+                Mynth creates highways to interconnect networks, allowing users
+                to seamlessly transfer native assets without barriers. Mynth
+                offers a suite of tools to help you navigate the complex world
+                of blockchains with ease, including:
+              </p>
+              <ul className="text-lg text-gray-800 dark:text-gray-300 mb-6 list-disc pl-6">
+                <li>MyUSD, a reliable and scalable stablecoin</li>
+                <li>
+                  Stable Swaps, allowing for full interoperability between
+                  stable assets
+                </li>
+                <li>
+                  Cross-Chain Swaps, enabling assets to be used interchangeably
+                </li>
+                <li>
+                  Mynth Lizard, a layer 2 network offering zero-knowledge proofs
+                </li>
+              </ul>
+              <p className="text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
+                Dissatisfied with the existing options for blockchain
+                interoperability and scalability, the Mynth team bonded together
+                to build on top of the most secure and decentralized network. We
+                are determined to further enhance blockchain usability and
+                fulfill the mission to equalize the playing field without
+                discrimination, bringing new financial opportunities to
+                everyone.
+              </p>
+            </div>
           </div>
         </div>
       </section>
