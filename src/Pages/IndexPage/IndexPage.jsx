@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import "./IndexPage.css";
 
 const IndexPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,9 +36,21 @@ const IndexPage = () => {
       <div className="h-16"></div>
 
       {/* Headline Section */}
-      <section className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center dark:from-black dark:to-slate-700">
+      <section className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center dark:from-black dark:to-slate-700 relative overflow-hidden">
+        <div className="glow-container">
+          <div className="ball"></div>
+          <div
+            className="ball"
+            style={{ "--delay": "-12s", "--size": "0.35", "--speed": "25s" }}
+          ></div>
+          <div
+            className="ball"
+            style={{ "--delay": "-10s", "--size": "0.3", "--speed": "15s" }}
+          ></div>
+        </div>
+        <div className=" mx-5 z-50">
         <motion.h1
-          className="text-6xl font-bold mb-4"
+          className="text-6xl font-bold mb-4 z-50"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -45,7 +58,7 @@ const IndexPage = () => {
           Connecting Cardano
         </motion.h1>
         <motion.p
-          className="text-2xl mb-8"
+          className="text-2xl mb-8 z-50"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -53,7 +66,7 @@ const IndexPage = () => {
           Building highways to other networks
         </motion.p>
         <motion.div
-          className="flex space-x-4"
+          className="flex justify-center space-x-4 z-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -70,7 +83,9 @@ const IndexPage = () => {
           >
             Build On Mynth
           </a>
-        </motion.div>
+        </motion.div>           
+        </div>
+ 
       </section>
 
       {/* MyUSD Introduction Section */}
@@ -143,67 +158,6 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 p-4 transition-transform transform hover:scale-105">
-            <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/O0ELHI4VE-w"
-                  title="Fireside Chat with Robert Roose"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <p className="p-4 text-gray-700 dark:text-gray-300">
-                What Is Mynth?
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Social Proof Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-700 text-center">
-        <h2 className="text-4xl font-bold mb-8">In the Spotlight</h2>
-        <div className="flex flex-wrap justify-center">
-          {/* Add your social proof elements here */}
-          <div className="w-full md:w-1/2 lg:w-1/3 p-4 transition-transform transform hover:scale-105">
-            <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/wvUukA48do8"
-                  title="MyUSD Explained: Dapp Central &amp; Mynth"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <p className="p-4 text-gray-700 dark:text-gray-300">
-                MyUSD Explained
-              </p>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2 lg:w-1/3 p-4 transition-transform transform hover:scale-105">
-            <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/DhP0ZLOO6no"
-                  title="How to Attract Investors to Stable Coins in Cardano? Alex Roose @ Mynth"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <p className="p-4 text-gray-700 dark:text-gray-300">
-                How to Attract Investors?
-              </p>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2 lg:w-1/3 p-4 transition-transform transform hover:scale-105">
             <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
