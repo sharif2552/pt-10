@@ -4,6 +4,8 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import "./IndexPage.css";
 import logo from "../../Assets/img/logo.svg";
+import technologyDark from "../../Assets/img/technology_dark.png";
+import technologyLight from "../../Assets/img/technology_light.png";
 
 const IndexPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,7 +26,9 @@ const IndexPage = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
       {/* Navbar */}
       <nav className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 shadow fixed top-0 left-0 right-0 z-50">
-        <div className="text-2xl font-bold"><img src={logo} alt="not found" /></div>
+        <div className="text-2xl font-bold">
+          <img src={logo} alt="not found" />
+        </div>
         <button
           onClick={toggleDarkMode}
           className="p-2 rounded-full bg-blue-600 text-white dark:bg-gray-600"
@@ -50,43 +54,42 @@ const IndexPage = () => {
           ></div>
         </div>
         <div className=" mx-5 z-50">
-        <motion.h1
-          className="text-6xl font-bold mb-4 z-50"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Connecting Cardano
-        </motion.h1>
-        <motion.p
-          className="text-2xl mb-8 z-50"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          Building highways to other networks
-        </motion.p>
-        <motion.div
-          className="flex justify-center space-x-4 z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <a
-            href="https://gitbook.com"
-            className="bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-100"
+          <motion.h1
+            className="text-6xl font-bold mb-4 z-50"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
           >
-            Documentation
-          </a>
-          <a
-            href="https://apidocs.com"
-            className="bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-100"
+            Connecting Cardano
+          </motion.h1>
+          <motion.p
+            className="text-2xl mb-8 z-50"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
-            Build On Mynth
-          </a>
-        </motion.div>           
+            Building highways to other networks
+          </motion.p>
+          <motion.div
+            className="flex justify-center space-x-4 z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <a
+              href="https://gitbook.com"
+              className="bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-100"
+            >
+              Documentation
+            </a>
+            <a
+              href="https://apidocs.com"
+              className="bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-100"
+            >
+              Build On Mynth
+            </a>
+          </motion.div>
         </div>
- 
       </section>
 
       {/* MyUSD Introduction Section */}
@@ -179,12 +182,11 @@ const IndexPage = () => {
         </div>
       </section>
 
-      {/* Intro Infographic Section */}
       <section className="py-20 bg-white dark:bg-gray-800 text-center">
         <h2 className="text-4xl font-bold mb-8">How It Works</h2>
         <div className="w-full max-w-4xl mx-auto">
           <img
-            src="path/to/your/infographic.png"
+            src={darkMode ? technologyDark : technologyLight}
             alt="Infographic"
             className="w-full rounded shadow-lg"
           />
