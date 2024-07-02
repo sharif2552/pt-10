@@ -25,9 +25,9 @@ const IndexPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 shadow fixed top-0 left-0 right-0 z-50">
+      <nav className="flex justify-between items-center p-4 bg-white dark:bg-custom-main-dark shadow fixed top-0 left-0 right-0 z-50">
         <div className="text-2xl font-bold">
-          <img src={logo} alt="not found" />
+          <img className=" " src={logo} alt="not found" />
         </div>
         <button
           onClick={toggleDarkMode}
@@ -53,7 +53,7 @@ const IndexPage = () => {
             style={{ "--delay": "-10s", "--size": "0.3", "--speed": "15s" }}
           ></div>
         </div>
-        <div className=" mx-5 z-50">
+        <div className=" mx-5 z-40">
           <motion.h1
             className="text-6xl font-bold mb-4 z-50"
             initial={{ opacity: 0, y: -50 }}
@@ -94,7 +94,7 @@ const IndexPage = () => {
 
       {/* MyUSD Introduction Section */}
       <div className="flex w-100vw flex-row justify-center">
-        <section className="flex flex-col lg:flex-row items-center lg:items-start py-20 lg:px-5 bg-white dark:bg-gray-800 text-center lg:text-left lg:space-x-10 space-y-10 lg:space-y-0 px-4 lg:flex">
+        <section className="flex flex-col w-full lg:flex-row items-center lg:items-start py-20 lg:px-5 bg-white dark:bg-custom-secondary-dark text-center lg:text-left lg:space-x-10 space-y-10 lg:space-y-0 px-4 lg:flex">
           <div className="lg:w-1/2 flex flex-col justify-center">
             <h2 className="text-4xl font-bold mb-4">Introducing MyUSD</h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
@@ -121,7 +121,7 @@ const IndexPage = () => {
       </div>
 
       {/* Social Proof Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-700 text-center">
+      <section className="py-20 bg-gray-100 dark:bg-custom-main-dark text-center">
         <h2 className="text-4xl font-bold mb-8">In the Spotlight</h2>
         <div className="flex flex-wrap justify-center space-x-4">
           {/* Add your social proof elements here */}
@@ -182,19 +182,56 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white dark:bg-gray-800 text-center">
-        <h2 className="text-4xl font-bold mb-8">How It Works</h2>
-        <div className="w-full max-w-4xl mx-auto">
-          <img
-            src={darkMode ? technologyDark : technologyLight}
-            alt="Infographic"
-            className="w-full rounded shadow-lg"
-          />
+      <section
+        className={`py-20 ${
+          darkMode
+            ? "bg-gray-900 text-gray-50"
+            : "bg-white dark:bg-custom-secondary-dark text-gray-900"
+        }`}
+      >
+        <h2 className="text-4xl font-bold mb-8">A Quick Intro</h2>
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto">
+          <div className="md:w-1/2 p-4">
+            <img
+              src={darkMode ? technologyDark : technologyLight}
+              alt="Infographic"
+              className="w-full rounded"
+            />
+          </div>
+          <div className="md:w-1/2 p-4">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
+              Mynth creates highways to interconnect networks, allowing users to
+              seamlessly transfer native assets without barriers. Mynth offers a
+              suite of tools to help you navigate the complex world of
+              blockchains with ease, including:
+            </p>
+            <ul className="text-xl text-gray-700 dark:text-gray-300 mb-8">
+              <li>MyUSD, a reliable and scalable stablecoin</li>
+              <li>
+                Stable Swaps, allowing for full interoperability between stable
+                assets
+              </li>
+              <li>
+                Cross-Chain Swaps, enabling assets to be used interchangeably
+              </li>
+              <li>
+                Mynth Lizard, a layer 2 network offering zero-knowledge proofs
+              </li>
+            </ul>
+            <p className="text-xl text-gray-700 dark:text-gray-300">
+              Dissatisfied with the existing options for blockchain
+              interoperability and scalability, the Mynth team bonded together
+              to build on top of the most secure and decentralized network. We
+              are determined to further enhance blockchain usability and fulfill
+              the mission to equalize the playing field without discrimination,
+              bringing new financial opportunities to everyone.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Intro Text Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-700 text-center">
+      <section className="py-20 bg-gray-100 dark:bg-custom-main-dark text-center">
         <div className="w-full max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-4">About Our Services</h2>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
@@ -205,7 +242,7 @@ const IndexPage = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 bg-white dark:bg-gray-800 text-center">
+      <section className="py-20 bg-white dark:bg-custom-secondary-dark text-center">
         <h2 className="text-4xl font-bold mb-8">Our Partners</h2>
         <div className="flex flex-wrap justify-center space-x-4">
           {/* Add your partners' logos and descriptions here */}
@@ -234,7 +271,7 @@ const IndexPage = () => {
       </section>
 
       {/* Roadmap Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-700 text-center">
+      <section className="py-20 bg-gray-100 dark:bg-custom-main-dark text-center">
         <h2 className="text-4xl font-bold mb-8">Our Roadmap</h2>
         <div className="w-full max-w-4xl mx-auto">
           {/* Add your roadmap content here */}
@@ -247,7 +284,7 @@ const IndexPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white dark:bg-gray-800 text-center">
+      <section className="py-20 bg-white dark:bg-custom-secondary-dark text-center">
         <h2 className="text-4xl font-bold mb-8">Meet the Team</h2>
         <div className="flex flex-wrap justify-center space-x-4">
           {/* Add your team members' photos and bios here */}
@@ -282,16 +319,25 @@ const IndexPage = () => {
       </section>
 
       {/* Social Links Section */}
-      <footer className="py-10 bg-blue-600 dark:bg-gray-800 text-white text-center">
+      <footer className="py-10 bg-white dark:bg-custom-main-dark text-white text-center">
         <div className="flex justify-center space-x-4">
           {/* Add your social media links here */}
-          <a href="https://twitter.com" className="hover:underline">
+          <a
+            href="https://twitter.com"
+            className="hover:underline text-black dark:text-white"
+          >
             Twitter
           </a>
-          <a href="https://linkedin.com" className="hover:underline">
+          <a
+            href="https://linkedin.com"
+            className="hover:underline text-black dark:text-white"
+          >
             LinkedIn
           </a>
-          <a href="https://github.com" className="hover:underline">
+          <a
+            href="https://github.com"
+            className="hover:underline text-black dark:text-white"
+          >
             GitHub
           </a>
         </div>
