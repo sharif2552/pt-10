@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import "./IndexPage.css";
+import logo from "../../Assets/img/logo.svg";
 
 const IndexPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,7 +24,7 @@ const IndexPage = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
       {/* Navbar */}
       <nav className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 shadow fixed top-0 left-0 right-0 z-50">
-        <div className="text-2xl font-bold">Logo</div>
+        <div className="text-2xl font-bold"><img src={logo} alt="not found" /></div>
         <button
           onClick={toggleDarkMode}
           className="p-2 rounded-full bg-blue-600 text-white dark:bg-gray-600"

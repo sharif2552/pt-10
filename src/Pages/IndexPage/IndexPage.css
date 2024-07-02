@@ -30,6 +30,7 @@ body {
   opacity: 0.6;
 }
 
+
 @keyframes loop {
   0% { transform: translate3D(0%, 51%, 0) rotate(0deg); }
   5% { transform: translate3D(8%, 31%, 0) rotate(18deg); }
