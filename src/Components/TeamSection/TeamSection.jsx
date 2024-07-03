@@ -6,8 +6,9 @@ import {
   FiGithub,
   FiLinkedin,
   FiTwitter,
-  FiDisc,
+  
 } from "react-icons/fi"; // Import icons from react-icons library
+import { FaDiscord } from "react-icons/fa";
 
 // Import team member images (replace these with actual image paths)
 import robertImage from "../../Assets/img/robert.jpg";
@@ -228,7 +229,7 @@ const TeamSection = () => {
                   className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                   title="Discord"
                 >
-                  <FiDisc size={24} />
+                  <FaDiscord size={24} />
                 </a>
               )}
             </div>
