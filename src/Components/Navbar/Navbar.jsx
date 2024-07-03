@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../../Assets/img/logo.svg";
-import "./Navbar.css"; // Make sure to import the CSS file
+import "./Navbar.css"; 
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <div className="flex items-center w-full sm:w-auto">
         {/* Hamburger menu for smaller screens */}
         <button
-          className="block sm:hidden ml-5 text-gray-800 dark:text-gray-400 focus:outline-none"
+          className="block md:hidden ml-5 text-gray-800 dark:text-gray-400 focus:outline-none"
           onClick={toggleMenu}
         >
           <div className={`hamburger ${isOpen ? "open" : ""}`}>
@@ -45,8 +45,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </div>
 
       {/* Logo for larger screens */}
-      <div className="hidden sm:flex">
+      <div className="hidden justify-start sm:flex">
         <img
+        className=" justify-start left-0"
           src={logo}
           alt="Logo"
           style={{ maxWidth: "160px", height: "auto" }}
@@ -57,46 +58,46 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } sm:flex sm:space-x-4 space-y-4 sm:space-y-0 absolute sm:relative top-16 sm:top-0 left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent dark:bg-custom-main-dark sm:dark:bg-transparent p-4 sm:p-0 shadow sm:shadow-none transition-all duration-300 ease-in-out`}
+        } md:flex sm:space-x-4 space-y-4 sm:space-y-0 absolute sm:relative top-16 sm:top-0 left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent dark:bg-custom-main-dark sm:dark:bg-transparent p-4 sm:p-0 shadow sm:shadow-none transition-all duration-300 ease-in-out`}
       >
         <a
           href="#hero"
-          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          className="block font-semibold text-4xl md:text-xl  sm:inline hover:font-bold"
           onClick={toggleMenu}
         >
           Home
         </a>
         <a
           href="#myusd"
-          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
           onClick={toggleMenu}
         >
           MyUSD
         </a>
         <a
           href="#social-proof"
-          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
           onClick={toggleMenu}
         >
           Social Proof
         </a>
         <a
           href="#partners"
-          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
           onClick={toggleMenu}
         >
           Partners
         </a>
         <a
           href="#roadmap"
-          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
           onClick={toggleMenu}
         >
           Roadmap
         </a>
         <a
           href="#team"
-          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
           onClick={toggleMenu}
         >
           Team

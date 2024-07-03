@@ -163,7 +163,7 @@ const TeamSection = () => {
       <motion.h2 className="text-4xl font-bold mb-8" variants={itemVariants}>
         Our Team
       </motion.h2>
-      <div className="flex  flex-wrap  justify-center items-center lg:space-x-8">
+      <div className="flex  flex-wrap  justify-center items-center ">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
