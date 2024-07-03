@@ -75,3 +75,19 @@
             transform: translateX(-50%);
   }
 }
+.timeline-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  background-color: #1D4ED8; /* Light green */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.dark .timeline-content:hover {
+  background-color: #080321; /* Light blue */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
