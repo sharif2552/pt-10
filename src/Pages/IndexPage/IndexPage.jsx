@@ -40,7 +40,6 @@ const IndexPage = () => {
       <IntroSection  />
       <PartnersSection />
       <Timeline />
-      <RoadmapSection />
       <TeamSection />
       <SocialLinksSection />
       {/* Scroll to top button */}

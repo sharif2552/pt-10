@@ -11,14 +11,14 @@ const Timeline = () => {
   return (
     <div className="dark:bg-[#14102C]">
       <section className="design-section">
-        <h1 className="text-center text-black dark:text-white text-7xl mb-5">
+        <h1 className="text-center text-black dark:text-white text-7xl mb-5 text-green-600">
           RoadMap
         </h1>
 
         {/* Year 2024 */}
         <div className="year2024">
           <div className="cursor-pointer" onClick={() => toggleYear(2024)}>
-            <h2 className="text-black dark:text-white text-6xl mb-5 mt-10">2024</h2>
+            <h2 className="text-black dark:text-white text-6xl mb-5 mt-10 text-blue-800">2024</h2>
           </div>
           {visibleYear === 2024 && (
             <div className="q1Timeline">
@@ -190,7 +190,7 @@ const Timeline = () => {
         {/* Year 2023 */}
         <div className="year2023">
           <div className="cursor-pointer" onClick={() => toggleYear(2023)}>
-            <h2 className="text-black dark:text-white text-6xl mt-10 mb-5">
+            <h2 className="text-black dark:text-white text-6xl mt-10 mb-5 text-blue-800">
               2023
             </h2>
           </div>
