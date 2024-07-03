@@ -10,6 +10,7 @@ import RoadmapSection from "../../Components/RoadmapSection/RoadmapSection";
 import TeamSection from "../../Components/TeamSection/TeamSection";
 import SocialLinksSection from "../../Components/SocialLinksSection/SocialLinksSection";
 import IntroSection from "../../Components/IntroSection/IntroSection";
+import Timeline from "../../Components/Timeline/Timeline";
 
 const IndexPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,6 +39,7 @@ const IndexPage = () => {
       <SocialProofSection />
       <IntroSection  />
       <PartnersSection />
+      <Timeline />
       <RoadmapSection />
       <TeamSection />
       <SocialLinksSection />
