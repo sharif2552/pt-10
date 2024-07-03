@@ -58,7 +58,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:flex sm:space-x-4 space-y-4 sm:space-y-0 absolute sm:relative top-16 sm:top-0 left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent dark:bg-custom-main-dark sm:dark:bg-transparent p-4 sm:p-0 shadow sm:shadow-none transition-all duration-300 ease-in-out`}
+        } md:flex sm:space-x-8 space-y-4 sm:space-y-0 absolute sm:relative top-16 sm:top-0 left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent dark:bg-custom-main-dark sm:dark:bg-transparent p-4 sm:p-0 shadow sm:shadow-none transition-all duration-300 ease-in-out`}
       >
         <a
           href="#hero"
