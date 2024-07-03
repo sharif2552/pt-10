@@ -43,32 +43,32 @@ const PartnersSection = () => {
       variants={containerVariants}
     >
       <motion.h2 className="text-4xl font-bold mb-8">Our Partners</motion.h2>
-      <div className="flex flex-wrap justify-center items-center space-x-8">
+      <div className="flex flex-wrap justify-center items-center ">
         <motion.img
           src={partner1}
           alt="Partner 1"
-          className="w-32 h-32 object-contain"
+          className="w-60 h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
         <motion.img
           src={partner2}
           alt="Partner 2"
-          className="w-32 h-32 object-contain"
+          className="w-60 h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
         <motion.img
           src={partner3}
           alt="Partner 3"
-          className="w-32 h-32 object-contain"
+          className="w-60 h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
         <motion.img
           src={partner4}
           alt="Partner 4"
-          className="w-32 h-32 object-contain"
+          className="w-60 h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
