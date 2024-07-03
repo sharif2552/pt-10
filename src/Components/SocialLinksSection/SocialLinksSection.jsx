@@ -5,6 +5,7 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"; // Import Discord icon from FontAwesome
 import { motion } from "framer-motion";
 
 const SocialLinksSection = () => {
@@ -40,7 +41,7 @@ const SocialLinksSection = () => {
         </motion.h2>
         <div className="flex justify-center space-x-6">
           <motion.a
-            href="https://twitter.com"
+            href="https://twitter.com/_mynth_"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
             variants={iconVariants}
             whileHover="hover"
@@ -48,20 +49,24 @@ const SocialLinksSection = () => {
             <FontAwesomeIcon icon={faTwitter} className="text-4xl" />
           </motion.a>
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/mynth-cardano/"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
             variants={iconVariants}
             whileHover="hover"
           >
             <FontAwesomeIcon icon={faLinkedin} className="text-4xl" />
           </motion.a>
+
           <motion.a
-            href="https://github.com"
+            href="https://discord.com/invite/xWTkKY4nYv"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
             variants={iconVariants}
             whileHover="hover"
           >
-            <FontAwesomeIcon icon={faGithub} className="text-4xl" />
+            <FontAwesomeIcon icon={faDiscord} className="text-4xl" />{" "}
+            {/* Discord icon */}
           </motion.a>
         </div>
       </motion.section>
