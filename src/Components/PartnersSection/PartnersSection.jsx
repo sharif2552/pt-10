@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import partner1 from "../../Assets/img/partner1.png";
 import partner2 from "../../Assets/img/partner2.png";
 import partner3 from "../../Assets/img/partner3.png";
-import partner4 from "../../Assets/img/partner4.png";
 
 const PartnersSection = () => {
   const controls = useAnimation();
@@ -43,32 +42,25 @@ const PartnersSection = () => {
       variants={containerVariants}
     >
       <motion.h2 className="text-4xl font-bold mb-8">Our Partners</motion.h2>
-      <div className="flex flex-wrap justify-center items-center ">
+      <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
         <motion.img
           src={partner1}
           alt="Partner 1"
-          className="w-60 h-60 mt-5 object-contain"
+          className="w-40 h-40 lg:w-60 lg:h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
         <motion.img
           src={partner2}
           alt="Partner 2"
-          className="w-60 h-60 mt-5 object-contain"
+          className="w-40 h-40 lg:w-60 lg:h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
         <motion.img
           src={partner3}
           alt="Partner 3"
-          className="w-60 h-60 mt-5 object-contain"
-          variants={itemVariants}
-          whileHover="hover"
-        />
-        <motion.img
-          src={partner4}
-          alt="Partner 4"
-          className="w-60 h-60 mt-5 object-contain"
+          className="w-40 h-40 lg:w-60 lg:h-60 mt-5 object-contain"
           variants={itemVariants}
           whileHover="hover"
         />
