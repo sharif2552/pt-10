@@ -167,7 +167,7 @@ const TeamSection = () => {
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
-            className="max-w-xs w-64 mx-6 bg-white ml-0 mb-5 dark:bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col items-center"
+            className="max-w-xs w-64 lg:mx-6 bg-white ml-0 mb-5 dark:bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col items-center"
             variants={itemVariants}
             whileHover="hover"
           >
