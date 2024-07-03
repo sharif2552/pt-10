@@ -34,14 +34,30 @@ const IndexPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <HeroSection />
-      <MyUSDSection />
-      <SocialProofSection />
-      <IntroSection  />
-      <PartnersSection />
-      <Timeline />
-      <TeamSection />
-      <SocialLinksSection />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="myusd">
+        <MyUSDSection />
+      </div>
+      <div id="social-proof">
+        <SocialProofSection />
+      </div>
+      <div id="intro">
+        <IntroSection />
+      </div>
+      <div id="partners">
+        <PartnersSection />
+      </div>
+      <div id="roadmap">
+        <Timeline />
+      </div>
+      <div id="team">
+        <TeamSection />
+      </div>
+      <div id="social-links">
+        <SocialLinksSection />
+      </div>
       {/* Scroll to top button */}
       <button
         onClick={scrollToTop}
