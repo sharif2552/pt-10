@@ -31,7 +31,7 @@ const IntroSection = ({ darkMode }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold mb-8 text-center">
+            <h2 className="text-4xl text-black dark:text-white font-bold mb-8 text-center">
               A Quick Intro
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center">
