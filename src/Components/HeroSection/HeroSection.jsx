@@ -40,7 +40,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <a
-            href="https://gitbook.com"
+            href="https://docs.mynth.ai/"
             className="bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-100"
           >
             Documentation
