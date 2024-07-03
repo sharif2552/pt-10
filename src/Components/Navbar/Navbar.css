@@ -1,0 +1,41 @@
+.hamburger {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.hamburger .line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.hamburger .line.middle {
+  top: 8px;
+}
+.hamburger .line.top {
+  top: 0;
+}
+.hamburger .line.bottom {
+  top: 16px;
+}
+.hamburger.open .line.top {
+  top: 8px;
+  transform: rotate(135deg);
+}
+.hamburger.open .line.middle {
+  opacity: 0;
+  left: -60px;
+}
+.hamburger.open .line.bottom {
+  top: 8px;
+  transform: rotate(-135deg);
+}

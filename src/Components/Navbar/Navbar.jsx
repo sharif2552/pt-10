@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSun,
-  faMoon,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../../Assets/img/logo.svg";
+import "./Navbar.css"; // Make sure to import the CSS file
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +26,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           className="block sm:hidden ml-5 text-gray-800 dark:text-gray-400 focus:outline-none"
           onClick={toggleMenu}
         >
-          <FontAwesomeIcon
-            icon={isOpen ? faTimes : faBars}
-            className="text-lg"
-          />
+          <div className={`hamburger ${isOpen ? "open" : ""}`}>
+            <div className="line top"></div>
+            <div className="line middle"></div>
+            <div className="line bottom"></div>
+          </div>
         </button>
 
         {/* Logo centered in the middle for smaller screens */}
@@ -62,22 +59,46 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           isOpen ? "block" : "hidden"
         } sm:flex sm:space-x-4 space-y-4 sm:space-y-0 absolute sm:relative top-16 sm:top-0 left-0 sm:left-auto w-full sm:w-auto bg-white sm:bg-transparent dark:bg-custom-main-dark sm:dark:bg-transparent p-4 sm:p-0 shadow sm:shadow-none transition-all duration-300 ease-in-out`}
       >
-        <a href="#hero" className="block sm:inline  hover:font-bold">
+        <a
+          href="#hero"
+          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          onClick={toggleMenu}
+        >
           Home
         </a>
-        <a href="#myusd" className="block sm:inline hover:font-bold">
+        <a
+          href="#myusd"
+          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          onClick={toggleMenu}
+        >
           MyUSD
         </a>
-        <a href="#social-proof" className="block sm:inline hover:font-bold">
+        <a
+          href="#social-proof"
+          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          onClick={toggleMenu}
+        >
           Social Proof
         </a>
-        <a href="#partners" className="block sm:inline hover:font-bold">
+        <a
+          href="#partners"
+          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          onClick={toggleMenu}
+        >
           Partners
         </a>
-        <a href="#roadmap" className="block sm:inline hover:font-bold">
+        <a
+          href="#roadmap"
+          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          onClick={toggleMenu}
+        >
           Roadmap
         </a>
-        <a href="#team" className="block sm:inline hover:font-bold">
+        <a
+          href="#team"
+          className="block font-semibold text-4xl sm:inline hover:font-bold"
+          onClick={toggleMenu}
+        >
           Team
         </a>
       </div>
