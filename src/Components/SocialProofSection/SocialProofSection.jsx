@@ -40,15 +40,15 @@ const SocialProofSection = () => {
       <motion.h2 className="text-4xl font-bold mb-8" variants={cardVariants}>
         In the Spotlight
       </motion.h2>
-      <div className="flex flex-wrap justify-center space-x-4">
+      <div className="flex flex-wrap justify-center md:space-x-4">
         {/* Video 1: MyUSD Explained */}
         <motion.div
-          className="w-full md:w-1/4 p-4 transition-transform transform"
+          className="w-80 md:w-1/4 p-4 transition-transform transform"
           variants={cardVariants}
           whileHover="hover"
         >
           <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <div className="h-60 aspect-w-16 aspect-h-9">
+            <div className=" aspect-w-16 aspect-h-9">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/wvUukA48do8"
@@ -67,12 +67,12 @@ const SocialProofSection = () => {
 
         {/* Video 2: How to Attract Investors? */}
         <motion.div
-          className="w-full md:w-1/4 p-4 transition-transform transform"
+          className="w-80 md:w-1/4 p-4 transition-transform transform"
           variants={cardVariants}
           whileHover="hover"
         >
           <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <div className="h-60 aspect-w-16 aspect-h-9">
+            <div className="aspect-w-16 aspect-h-9">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/DhP0ZLOO6no"
@@ -91,12 +91,12 @@ const SocialProofSection = () => {
 
         {/* Video 3: What Is Mynth? */}
         <motion.div
-          className="w-full md:w-1/4 p-4 transition-transform transform"
+          className="w-80 md:w-1/4 p-4 transition-transform transform"
           variants={cardVariants}
           whileHover="hover"
         >
           <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <div className="h-60 aspect-w-16 aspect-h-9">
+            <div className="aspect-w-16 aspect-h-9">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/O0ELHI4VE-w"
