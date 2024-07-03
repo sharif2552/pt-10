@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #14102C;
+
   min-height: 100vh;
   padding: 100px 0;
   font-family: Jost;
@@ -29,8 +29,7 @@
 .timeline-content {
   padding: 20px;
   background: #1f1f1f;
-  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+
   border-radius: 5px;
   color: white;
   padding: 1.75rem;
@@ -39,6 +38,11 @@
   margin: 1rem;
   margin-bottom: 20px;
   border-radius: 6px;
+}
+
+.timeline-content-dark {
+  background: #14102C;
+  box-shadow: 5px 5px 10px #0e0a1f, -5px -5px 10px #1a1641;
 }
 
 .timeline-component {
