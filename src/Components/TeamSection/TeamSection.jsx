@@ -36,7 +36,7 @@ const TeamSection = () => {
   return (
     <motion.section
       ref={ref}
-      className="py-20 bg-white dark:bg-custom-secondary-dark text-center"
+      className="py-20 bg-white dark:bg-custom-main-dark text-center"
       initial="hidden"
       animate={controls}
       variants={containerVariants}

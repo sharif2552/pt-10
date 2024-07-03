@@ -32,7 +32,7 @@ const RoadmapSection = () => {
   return (
     <motion.section
       ref={ref}
-      className="py-20 bg-gray-100 dark:bg-custom-main-dark text-center"
+      className="py-20 bg-gray-100 dark:bg-custom-secondary-dark text-center"
       initial="hidden"
       animate={controls}
       variants={containerVariants}
