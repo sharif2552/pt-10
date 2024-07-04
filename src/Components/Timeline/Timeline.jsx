@@ -174,21 +174,21 @@ const TimelinePopup = ({ item, onClose }) => {
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
       <motion.div
         ref={popupRef}
-        className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-10/12 text-left"
+        className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-10/12 lg:w-6/12  text-left"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.3 }}
       >
         <button
-          className="absolute font-bold text2xl top-2 right-5 text-gray-500"
+          className="absolute font-bold text-2xl top-0 right-3 text-gray-500"
           onClick={onClose}
         >
           &times;
         </button>
         <img src={item.img} alt={item.title} className="mb-4" />
-        <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
-        <p>{item.description}</p>
+        <h2 className="text-xl font-bold mb-4">{item.title}</h2>
+        <p className=" text-md">{item.description}</p>
       </motion.div>
     </div>
   );
