@@ -10,7 +10,6 @@ import TeamSection from "../../Components/TeamSection/TeamSection";
 import SocialLinksSection from "../../Components/SocialLinksSection/SocialLinksSection";
 import IntroSection from "../../Components/IntroSection/IntroSection";
 import Timeline from "../../Components/Timeline/Timeline";
-import TestComp from "../../Components/TestComp/TestComp";
 
 
 const IndexPage = () => {
@@ -54,9 +53,6 @@ const IndexPage = () => {
       </div>
       <div id="roadmap">
         <Timeline />
-      </div>
-      <div>
-        <TestComp />
       </div>
       <div id="team">
         <TeamSection />

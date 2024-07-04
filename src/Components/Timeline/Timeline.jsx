@@ -37,7 +37,8 @@ const data = [
   {
     img: require("../../Assets/img/timeline/Mynth_CNT_Swaps-6.png"),
     title: "Mynth CNT Swaps",
-    description: "Detailed description for Mynth CNT Swaps.",
+    description:
+      "Mynth is moving towards universal token liquidity, making the exchange of all tokens frictionless. At the heart of this endeavor are stablecoins, which Mynth utilizes to facilitate cross-chain swaps. This allows Mynth to offer a more secure and robust model, building on top of Cardano’s decentralization. <br /> Further expanding accessibility, Mynth is enabling the exchange of any Cardano token to a stablecoin, bypassing the traditional requirement for an existing liquidity pool. This means that any token can be easily converted into stablecoins, regardless of popularity, providing users with flexibility and freedom in managing their digital assets. Through these mechanisms, Mynth is not just enabling smoother transactions but is also fostering a more inclusive and interconnected blockchain environment.",
   },
   {
     img: require("../../Assets/img/timeline/article-DAO-7.jpg"),
@@ -152,7 +153,7 @@ const TimelinePopup = ({ item, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-lg relative w-1/2">
+      <div className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-1/2">
         <button
           className="absolute top-2 right-2 text-gray-500"
           onClick={onClose}
@@ -160,7 +161,7 @@ const TimelinePopup = ({ item, onClose }) => {
           &times;
         </button>
         <img src={item.img} alt={item.title} className="mb-4" />
-        <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
+        <h2 className="text-2xl font-bold mb-4 ">{item.title}</h2>
         <p>{item.description}</p>
       </div>
     </div>
