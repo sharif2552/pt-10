@@ -174,7 +174,7 @@ const TimelinePopup = ({ item, onClose }) => {
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
       <motion.div
         ref={popupRef}
-        className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-3/4 text-left"
+        className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-10/12 text-left"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
