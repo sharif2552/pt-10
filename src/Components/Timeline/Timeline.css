@@ -67,8 +67,8 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
     -webkit-transform: translateX(-50%);
@@ -90,4 +90,28 @@
   background-color: #080321; /* Light blue */
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-circle {
+  display: hidden;
+
+}
+@media screen and (min-width: 768px) {
+.timeline-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;  /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+  border-radius: 50%;
+  background-color: #fff; /* Adjust color as needed */
+  color: #000; /* Adjust text color as needed */
+}
+  
 }
