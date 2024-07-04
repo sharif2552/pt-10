@@ -6,11 +6,12 @@ import HeroSection from "../../Components/HeroSection/HeroSection";
 import MyUSDSection from "../../Components/MyUSDSection/MyUSDSection";
 import SocialProofSection from "../../Components/SocialProofSection/SocialProofSection";
 import PartnersSection from "../../Components/PartnersSection/PartnersSection";
-import RoadmapSection from "../../Components/RoadmapSection/RoadmapSection";
 import TeamSection from "../../Components/TeamSection/TeamSection";
 import SocialLinksSection from "../../Components/SocialLinksSection/SocialLinksSection";
 import IntroSection from "../../Components/IntroSection/IntroSection";
 import Timeline from "../../Components/Timeline/Timeline";
+import TestComp from "../../Components/TestComp/TestComp";
+
 
 const IndexPage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,6 +31,8 @@ const IndexPage = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
@@ -51,6 +54,9 @@ const IndexPage = () => {
       </div>
       <div id="roadmap">
         <Timeline />
+      </div>
+      <div>
+        <TestComp />
       </div>
       <div id="team">
         <TeamSection />
