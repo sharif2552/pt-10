@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import "./Timeline.css";
@@ -43,27 +43,32 @@ const data = [
   {
     img: require("../../Assets/img/timeline/article-DAO-7.jpg"),
     title: "Mynth DAO",
-    description: "Detailed description for Mynth DAO.",
+    description:
+      "The DAO leads the Mynth Protocol and its projects. Governed by the MNT token, the DAO allows members to influence the protocol’s direction. By staking MNT, you earn rewards and a share in the protocol's revenue. MNT holders can vote on key initiatives, contributing to Mynth's future.",
   },
   {
     img: require("../../Assets/img/timeline/Mynth_Arbitrum_Integration-8.png"),
     title: "Cardano and Arbitrum Integration",
-    description: "Detailed description for Cardano and Arbitrum Integration.",
+    description:
+      "To enhance cross-chain functionality, we're linking Cardano with Arbitrum. Arbitrum's high-speed, low-cost transactions complement Cardano's secure, decentralized blockchain, fostering a more integrated cryptocurrency ecosystem.",
   },
   {
     img: require("../../Assets/img/timeline/Bitcoin_Integration-9.png"),
     title: "Cardano and Bitcoin Integration",
-    description: "Detailed description for Cardano and Bitcoin Integration.",
+    description:
+      "Mynth is advancing blockchain interoperability by connecting Cardano with Bitcoin. This integration combines Bitcoin's security and market presence with Cardano's advanced programmability, enhancing the cryptocurrency environment.",
   },
   {
     img: require("../../Assets/img/timeline/MyUSD_Saving_Account-10.jpg"),
     title: "Mynth Savings Account",
-    description: "Detailed description for Mynth Savings Account.",
+    description:
+      "Introducing the Mynth Savings Account: a new way to save and earn rewards. You maintain control of your funds at all times, with no penalties or locking, ensuring your savings are always accessible for your needs.",
   },
   {
     img: require("../../Assets/img/timeline/Stable_Insurance-11.jpg"),
     title: "Mynth Stable Insurance",
-    description: "Detailed description for Mynth Stable Insurance.",
+    description:
+      "We’re developing Stables Insurance to MyUSD in response to the unpredictable nature of digital currencies. This framework aims to protect MyUSD holders from unforeseen events, ensuring stability and security even in challenging circumstances. Stables Insurance reflects our dedication to fortifying MyUSD's robustness and providing peace of mind to users, reinforcing trust in MyUSD as a safe and dependable digital asset.",
   },
 ];
 
@@ -124,7 +129,6 @@ const briefDescriptions = [
       "We aim to protect MyUSD holders from unforeseen events. Stables Insurance reflects our dedication to fortifying MyUSD's robustness and providing you with peace of mind.",
   },
 ];
-
 const TimelineItem = ({ item, briefDescription, onClick }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -153,7 +157,7 @@ const TimelinePopup = ({ item, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-1/2">
+      <div className="bg-white dark:bg-custom-main-dark p-8 rounded-lg relative w-3/4 text-left">
         <button
           className="absolute top-2 right-2 text-gray-500"
           onClick={onClose}
@@ -161,7 +165,7 @@ const TimelinePopup = ({ item, onClose }) => {
           &times;
         </button>
         <img src={item.img} alt={item.title} className="mb-4" />
-        <h2 className="text-2xl font-bold mb-4 ">{item.title}</h2>
+        <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
         <p>{item.description}</p>
       </div>
     </div>
@@ -170,6 +174,14 @@ const TimelinePopup = ({ item, onClose }) => {
 
 const Timeline = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const imageUrls = data.map((item) => item.img);
+    preloadImages(imageUrls).then(() => {
+      setIsLoaded(true);
+    });
+  }, []);
 
   const handleClick = (item) => {
     setSelectedItem(item);
@@ -180,7 +192,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="dark:bg-[#14102C]">
+    <div className={`dark:bg-[#14102C] ${isLoaded ? 'loaded' : 'loading'}`}>
       <section className="design-section">
         <div className="year2024">
           <h2 className="text-black dark:text-white text-6xl mb-5 mt-10 text-blue-800">
@@ -191,119 +203,164 @@ const Timeline = () => {
               {/* First row */}
               <div className="timeline-empty"></div>
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q1
+                  </span>
+                  <span className="md:hidden">Q1</span>
+                </div>
               </div>
               <TimelineItem
                 item={data[0]}
                 briefDescription={briefDescriptions[0]}
                 onClick={handleClick}
               />
-
               {/* Second row */}
+              <span className="md:hidden">Q1</span>
               <TimelineItem
                 item={data[1]}
                 briefDescription={briefDescriptions[1]}
                 onClick={handleClick}
               />
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q1
+                  </span>
+                </div>
               </div>
               <div className="timeline-empty"></div>
-
               {/* Third row */}
+              <span className="md:hidden">Q1</span>
               <div className="timeline-empty"></div>
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle ">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q1
+                  </span>
+                </div>
               </div>
               <TimelineItem
                 item={data[2]}
                 briefDescription={briefDescriptions[2]}
                 onClick={handleClick}
               />
-
               {/* Fourth row */}
+              <span className="md:hidden">Q1</span>
               <TimelineItem
                 item={data[3]}
                 briefDescription={briefDescriptions[3]}
                 onClick={handleClick}
               />
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q1
+                  </span>
+                </div>
               </div>
               <div className="timeline-empty"></div>
-
               {/* Fifth row */}
+              <span className="md:hidden">Q2</span>
               <div className="timeline-empty"></div>
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q2
+                  </span>
+                </div>
               </div>
               <TimelineItem
                 item={data[4]}
                 briefDescription={briefDescriptions[4]}
                 onClick={handleClick}
               />
-
               {/* Sixth row */}
+              <span className="md:hidden">Q2</span>
               <TimelineItem
                 item={data[5]}
                 briefDescription={briefDescriptions[5]}
                 onClick={handleClick}
               />
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q2
+                  </span>
+                </div>
               </div>
               <div className="timeline-empty"></div>
             </div>
-
             <div className="timeline">
               {/* Seventh row */}
+              <span className="md:hidden">Q2</span>
               <div className="timeline-empty"></div>
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q2
+                  </span>
+                </div>
               </div>
               <TimelineItem
                 item={data[6]}
                 briefDescription={briefDescriptions[6]}
                 onClick={handleClick}
               />
-
               {/* Eighth row */}
+              <span className="md:hidden">Q3</span>
               <TimelineItem
                 item={data[7]}
                 briefDescription={briefDescriptions[7]}
                 onClick={handleClick}
               />
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q3
+                  </span>
+                </div>
               </div>
               <div className="timeline-empty"></div>
-
               {/* Ninth row */}
+              <span className="md:hidden">Q3</span>
               <div className="timeline-empty"></div>
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q3
+                  </span>
+                </div>
               </div>
               <TimelineItem
                 item={data[8]}
                 briefDescription={briefDescriptions[8]}
                 onClick={handleClick}
               />
-
               {/* Tenth row */}
+              <span className="md:hidden">Q4</span>
               <TimelineItem
                 item={data[9]}
                 briefDescription={briefDescriptions[9]}
                 onClick={handleClick}
               />
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q4
+                  </span>
+                </div>
               </div>
               <div className="timeline-empty"></div>
-
               {/* Eleventh row */}
+              <span className="md:hidden">Q4</span>
               <div className="timeline-empty"></div>
               <div className="timeline-middle">
-                <div className="timeline-circle"></div>
+                <div className="timeline-circle">
+                  <span className="hidden md:block w-full h-full mt-2 text-black dark:text-white">
+                    Q4
+                  </span>
+                </div>
               </div>
               <TimelineItem
                 item={data[10]}
@@ -314,10 +371,22 @@ const Timeline = () => {
           </div>
         </div>
       </section>
-      {selectedItem && (
-        <TimelinePopup item={selectedItem} onClose={closePopup} />
-      )}
+      <TimelinePopup item={selectedItem} onClose={closePopup} />
     </div>
+  );
+};
+
+const preloadImages = (imageUrls) => {
+  return Promise.all(
+    imageUrls.map(
+      (src) =>
+        new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = reject;
+        })
+    )
   );
 };
 
