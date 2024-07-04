@@ -216,9 +216,9 @@ const Timeline = () => {
 
   return (
     <div className={`dark:bg-[#14102C] ${isLoaded ? 'loaded' : 'loading'}`}>
-      <section className="design-section">
+      <section className="design-section lg:mt-10">
         <div className="year2024">
-          <h2 className="text-black dark:text-white text-6xl mb-5 mt-10 text-blue-800">
+          <h2 className="text-black dark:text-white text-6xl mb-10 lg:mb-20 mt-10 text-blue-800">
             RoadMap
           </h2>
           <div className="q1Timeline">
