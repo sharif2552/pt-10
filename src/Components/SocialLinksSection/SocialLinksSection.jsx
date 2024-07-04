@@ -42,6 +42,7 @@ const SocialLinksSection = () => {
         <div className="flex justify-center space-x-6">
           <motion.a
             href="https://twitter.com/_mynth_"
+            target="_blank"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
             variants={iconVariants}
             whileHover="hover"
@@ -50,6 +51,7 @@ const SocialLinksSection = () => {
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/company/mynth-cardano/"
+            target="_blank"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
             variants={iconVariants}
             whileHover="hover"
