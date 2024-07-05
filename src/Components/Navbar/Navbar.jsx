@@ -14,7 +14,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <nav
-      className={`flex justify-between dark:bg-custom-main-dark items-center p-4 shadow fixed top-0 left-0 right-0 z-50`}
+      className={`flex justify-between bg-custom-main-dark dark:bg-custom-main-dark items-center p-4 shadow fixed top-0 left-0 right-0 z-50`}
       style={{
         backdropFilter: "blur(10px)", // Blur effect
         WebkitBackdropFilter: "blur(10px)", // For Safari
@@ -47,7 +47,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       {/* Logo for larger screens */}
       <div className="hidden justify-start sm:flex">
         <img
-        className=" justify-start left-0"
+          className=" justify-start left-0"
           src={logo}
           alt="Logo"
           style={{ maxWidth: "160px", height: "auto" }}
@@ -62,42 +62,42 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       >
         <a
           href="#hero"
-          className="block font-semibold text-4xl md:text-xl  sm:inline hover:font-bold"
+          className="block font-semibold text-white text-4xl md:text-xl  sm:inline "
           onClick={toggleMenu}
         >
           Home
         </a>
         <a
           href="#myusd"
-          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
+          className="block font-semibold text-white text-4xl md:text-xl sm:inline "
           onClick={toggleMenu}
         >
           MyUSD
         </a>
         <a
           href="#social-proof"
-          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
+          className="block font-semibold text-white text-4xl md:text-xl sm:inline "
           onClick={toggleMenu}
         >
           Social Proof
         </a>
         <a
           href="#partners"
-          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
+          className="block font-semibold text-white text-4xl md:text-xl sm:inline "
           onClick={toggleMenu}
         >
           Partners
         </a>
         <a
           href="#roadmap"
-          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
+          className="block font-semibold text-white text-4xl md:text-xl sm:inline "
           onClick={toggleMenu}
         >
           Roadmap
         </a>
         <a
           href="#team"
-          className="block font-semibold text-4xl md:text-xl sm:inline hover:font-bold"
+          className="block font-semibold text-white text-4xl md:text-xl sm:inline "
           onClick={toggleMenu}
         >
           Team
